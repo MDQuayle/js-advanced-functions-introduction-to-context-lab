@@ -20,12 +20,12 @@ function createEmployeeRecords(firstArg){
 }
 
 function createTimeInEvent(record, dateStamp){
-    record.timeInEvents = [{type: "TimeIn", hour: parseInt(dateStamp.slice(11,15)), date: dateStamp.slice(0,10)}]
+    record.timeInEvents.push({type: "TimeIn", hour: parseInt(dateStamp.slice(11,15)), date: dateStamp.slice(0,10)})
     return record
 }
 
 function createTimeOutEvent(record,dateStamp){
-    record.timeOutEvents = [{type: "TimeOut", hour: parseInt(dateStamp.slice(11,15)), date: dateStamp.slice(0,10)}]
+    record.timeOutEvents.push({type: "TimeOut", hour: parseInt(dateStamp.slice(11,15)), date: dateStamp.slice(0,10)})
     return record
 }
 
